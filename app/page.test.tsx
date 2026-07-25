@@ -5,10 +5,16 @@ import Home from "./page";
 const SECTION_IDS = ["home", "services", "towed-vehicle", "release-form", "faq", "contact"];
 
 describe("Home page", () => {
-  it("renders every spec section id in order", () => {
+  it("renders every spec section id in the correct order", () => {
     const { container } = render(<Home />);
-    for (const id of SECTION_IDS) {
-      expect(container.querySelector(`#${id}`)).not.toBeNull();
+    const elements = SECTION_IDS.map((id) => {
+      const el = container.querySelector(`#${id}`);
+      expect(el).not.toBeNull();
+      return el as Element;
+    });
+    for (let i = 0; i < elements.length - 1; i++) {
+      const relation = elements[i].compareDocumentPosition(elements[i + 1]);
+      expect(relation & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     }
   });
 
