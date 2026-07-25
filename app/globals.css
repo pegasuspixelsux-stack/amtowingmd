@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: var(--color-light-gray);
+  background: #ff0000;
   color: var(--color-charcoal);
   font-family: var(--font-body), system-ui, sans-serif;
 }
