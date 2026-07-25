@@ -1,9 +1,8 @@
-import { describe, expect, it, afterEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
 import Header from "./Header";
 
 describe("Header", () => {
-  afterEach(() => cleanup());
   it("shows the business name and a working call CTA", () => {
     render(<Header />);
     expect(screen.getByText("A&M Repair & Towing")).toBeInTheDocument();

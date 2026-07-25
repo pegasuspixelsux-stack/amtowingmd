@@ -1,10 +1,9 @@
-import { describe, expect, it, afterEach } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import MobileNav from "./MobileNav";
 
 describe("MobileNav", () => {
-  afterEach(() => cleanup());
   it("is closed by default and opens the menu on click", async () => {
     render(<MobileNav />);
     expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
