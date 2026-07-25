@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/hero-placeholder.jpg"
-          alt="A&M Repair & Towing tow truck responding to a roadside call"
+          alt="A&M Repair & Towing tow truck responding to a service call"
           fill
           priority
           sizes="100vw"
@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
       <div className="mx-auto max-w-[1280px] px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <h1 className="max-w-2xl font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-          24/7 Towing & Roadside Assistance in Montgomery County, Maryland
+          24/7 Towing & Light Truck Services in Montgomery County, Maryland
         </h1>
         <p className="mt-6 max-w-xl text-lg text-white/90">
           Fast, courteous, and affordable towing services when you need them most. A&amp;M
@@ -43,7 +43,7 @@ export default function Hero() {
             href="#services"
             className="inline-flex min-h-[48px] items-center justify-center rounded-lg border-2 border-white px-8 text-lg font-bold text-white transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Get Roadside Assistance
+            Get Light Truck Towing
           </a>
         </div>
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">

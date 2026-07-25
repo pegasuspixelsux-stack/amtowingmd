@@ -9,8 +9,8 @@ const SERVICES = [
   },
   {
     icon: LifeBuoy,
-    title: "Roadside Assistance",
-    body: "Help when you're dealing with a vehicle emergency on the road.",
+    title: "Light Truck Towing",
+    body: "Dedicated towing service for light trucks and pickups.",
   },
   {
     icon: AlertTriangle,
@@ -39,7 +39,7 @@ export default function Services() {
     <section id="services" className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-heading text-3xl font-bold text-charcoal md:text-4xl">
-          Towing &amp; Roadside Assistance Services
+          Towing &amp; Light Truck Services
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ icon: Icon, title, body }) => (

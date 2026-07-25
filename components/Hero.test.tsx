@@ -8,13 +8,13 @@ describe("Hero", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: "24/7 Towing & Roadside Assistance in Montgomery County, Maryland",
+        name: "24/7 Towing & Light Truck Services in Montgomery County, Maryland",
       })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: "Call Now — (301) 421-0953" })
     ).toHaveAttribute("href", "tel:+13014210953");
-    expect(screen.getByRole("link", { name: "Get Roadside Assistance" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Get Light Truck Towing" })).toHaveAttribute(
       "href",
       "#services"
     );

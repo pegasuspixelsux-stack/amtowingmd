@@ -2,7 +2,7 @@ import { BUSINESS, NAV_LINKS } from "@/lib/constants";
 
 const SERVICES = [
   "Emergency Towing",
-  "Roadside Assistance",
+  "Light Truck Towing",
   "Accident Towing",
   "Breakdown Assistance",
   "Vehicle Recovery",
@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <h3 className="font-heading text-lg font-bold">A&amp;M Repair &amp; Towing</h3>
             <p className="mt-3 text-sm text-white/70">
-              Family-owned and operated towing and roadside assistance serving Montgomery
+              Family-owned and operated towing and light truck services serving Montgomery
               County, Maryland since 2003.
             </p>
           </div>

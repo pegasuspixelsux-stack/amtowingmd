@@ -10,7 +10,7 @@ export default function EmergencyCTA() {
           Vehicle Trouble? Don&apos;t Wait. Call Us.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">
-          Our team is available 24 hours a day, 7 days a week to help with towing and roadside
+          Our team is available 24 hours a day, 7 days a week to help with towing
           emergencies.
         </p>
         <a

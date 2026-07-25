@@ -4,7 +4,7 @@ import Services from "./Services";
 
 const SERVICE_TITLES = [
   "Emergency Towing",
-  "Roadside Assistance",
+  "Light Truck Towing",
   "Accident Towing",
   "Breakdown Assistance",
   "Vehicle Recovery",

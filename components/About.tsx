@@ -15,7 +15,7 @@ export default function About() {
           </p>
           <p className="mt-4 text-base leading-relaxed text-charcoal/80">
             We are a family-owned and operated business that has been serving the community
-            since 2003. Our licensed and insured drivers are experienced in handling roadside
+            since 2003. Our licensed and insured drivers are experienced in handling
             emergencies, breakdowns, accidents, and a wide range of towing needs.
           </p>
           <p className="mt-4 text-base leading-relaxed text-charcoal/80">

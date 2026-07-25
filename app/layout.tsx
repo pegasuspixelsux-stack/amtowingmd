@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "A&M Repair & Towing | 24/7 Towing & Roadside Assistance in Montgomery County, MD",
+  title: "A&M Repair & Towing | 24/7 Towing & Light Truck Services in Montgomery County, MD",
   description:
-    "A&M Repair & Towing provides fast, courteous, and affordable 24/7 towing and roadside assistance in Montgomery County, Maryland. Family-owned and serving the community since 2003.",
+    "A&M Repair & Towing provides fast, courteous, and affordable 24/7 towing and light truck services in Montgomery County, Maryland. Family-owned and serving the community since 2003.",
 };
 
 const organizationJsonLd = {
@@ -28,7 +28,7 @@ const organizationJsonLd = {
   email: BUSINESS.email,
   areaServed: BUSINESS.serviceArea,
   foundingDate: BUSINESS.established,
-  description: "24/7 towing and roadside assistance serving Montgomery County, Maryland since 2003.",
+  description: "24/7 towing and light truck services serving Montgomery County, Maryland since 2003.",
 };
 
 export default function RootLayout({
