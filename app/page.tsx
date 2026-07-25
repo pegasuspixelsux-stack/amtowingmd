@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="pb-20 md:pb-0">
+      <main>
         <Hero />
         <HazardStripe />
         <TrustBar />

@@ -23,27 +23,26 @@ export default function MobileNav() {
           <Menu className="h-5 w-5" aria-hidden="true" />
         )}
       </button>
-      {open ? (
-        <nav
-          id="mobile-nav-menu"
-          aria-label="Primary"
-          className="absolute inset-x-0 top-full border-b border-hairline bg-white px-4 py-4 shadow-md"
-        >
-          <ul className="space-y-3">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block text-base font-medium text-charcoal hover:text-fire-red"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      ) : null}
+      <nav
+        id="mobile-nav-menu"
+        aria-label="Primary"
+        hidden={!open}
+        className="absolute inset-x-0 top-full border-b border-hairline bg-white px-4 py-4 shadow-md"
+      >
+        <ul className="space-y-3">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-base font-medium text-charcoal hover:text-fire-red"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }

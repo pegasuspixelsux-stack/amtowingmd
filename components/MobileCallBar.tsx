@@ -9,7 +9,7 @@ export default function MobileCallBar() {
     >
       <a
         href={BUSINESS.phoneLink}
-        className="flex min-h-[56px] w-full items-center justify-center gap-2 bg-fire-red text-lg font-bold text-white"
+        className="flex min-h-[56px] w-full items-center justify-center gap-2 bg-fire-red text-lg font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         <Phone className="h-5 w-5" aria-hidden="true" />
         CALL NOW — {BUSINESS.phone}

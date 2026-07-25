@@ -6,12 +6,12 @@ import MobileNav from "./MobileNav";
 describe("MobileNav", () => {
   it("is closed by default and opens the menu on click", async () => {
     render(<MobileNav />);
-    expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
+    expect(screen.getByRole("navigation", { hidden: true })).not.toBeVisible();
 
     const toggle = screen.getByRole("button", { name: /open menu/i });
     await userEvent.click(toggle);
 
-    expect(screen.getByRole("navigation")).toBeInTheDocument();
+    expect(screen.getByRole("navigation")).toBeVisible();
     expect(screen.getByRole("link", { name: "FAQ" })).toHaveAttribute("href", "#faq");
   });
 
@@ -19,6 +19,6 @@ describe("MobileNav", () => {
     render(<MobileNav />);
     await userEvent.click(screen.getByRole("button", { name: /open menu/i }));
     await userEvent.click(screen.getByRole("link", { name: "Home" }));
-    expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
+    expect(screen.getByRole("navigation", { hidden: true })).not.toBeVisible();
   });
 });
