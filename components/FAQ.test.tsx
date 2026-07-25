@@ -10,7 +10,7 @@ describe("FAQ", () => {
     expect(question).toHaveAttribute("aria-expanded", "false");
     expect(
       screen.queryByText(/a representative will help you determine/)
-    ).not.toBeInTheDocument();
+    ).not.toBeVisible();
   });
 
   it("opens one answer at a time", async () => {
@@ -24,7 +24,7 @@ describe("FAQ", () => {
     expect(first).toHaveAttribute("aria-expanded", "true");
     expect(
       screen.getByText(/a representative will help you determine/)
-    ).toBeInTheDocument();
+    ).toBeVisible();
 
     await userEvent.click(second);
     expect(first).toHaveAttribute("aria-expanded", "false");

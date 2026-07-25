@@ -43,16 +43,15 @@ export default function FAQ() {
                     />
                   </button>
                 </h3>
-                {isOpen ? (
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                    className="pb-5 text-sm leading-relaxed text-charcoal/80"
-                  >
-                    {item.answer}
-                  </div>
-                ) : null}
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                  className="pb-5 text-sm leading-relaxed text-charcoal/80"
+                >
+                  {item.answer}
+                </div>
               </div>
             );
           })}
