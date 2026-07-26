@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="flex flex-col items-center">
             <a
               href={BUSINESS.phoneLink}
-              className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full bg-[#ffff00] px-4 text-sm font-bold text-black transition hover:bg-[#e6e600] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full bg-[#ffff00] px-4 text-sm font-bold text-black transition duration-300 hover:scale-[1.2] hover:bg-[#e6e600] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Call A&amp;M Towing Now
             </a>
