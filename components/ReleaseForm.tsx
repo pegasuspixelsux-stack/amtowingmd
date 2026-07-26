@@ -71,7 +71,8 @@ export default function ReleaseForm() {
     <section id="release-form" className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-[800px] px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">
-          Insurance Vehicle Release Form
+          Insurance Vehicle <br className="md:hidden" />
+          Release Form
         </h2>
         <p className="mt-4 text-base text-charcoal/80">
           Your insurance company may need authorization to access and inspect your vehicle.

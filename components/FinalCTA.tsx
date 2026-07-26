@@ -5,7 +5,8 @@ export default function FinalCTA() {
     <section className="py-16 text-center md:py-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-          Need a Tow? We&apos;re Ready to Help.
+          Need a Tow? <br className="md:hidden" />
+          We&apos;re Ready to Help.
         </h2>
         <p className="mt-4 text-lg text-white/90">
           A&amp;M Repair &amp; Towing is available 24 hours a day, 7 days a week.
