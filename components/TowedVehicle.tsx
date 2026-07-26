@@ -43,8 +43,9 @@ export default function TowedVehicle() {
               href={BUSINESS.phoneLink}
               className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-lg bg-fire-red px-6 text-base font-bold text-white transition hover:bg-fire-red-dark"
             >
-              Call About My Vehicle
+              Call A&amp;M Towing Now
             </a>
+            <p className="mt-1 text-xs text-white/70">Call {BUSINESS.phone}</p>
           </div>
           <PersonalBelongings />
         </div>

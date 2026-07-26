@@ -1,7 +1,10 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { BUSINESS } from "@/lib/constants";
+import EmailReleaseInfo from "./EmailReleaseInfo";
+
+const MAX_FILES = 5;
 
 const FIELDS: Array<{
   id: string;
@@ -27,6 +30,29 @@ const FIELDS: Array<{
 export default function ReleaseForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const selected = Array.from(event.target.files ?? []);
+    event.target.value = "";
+    if (selected.length === 0) return;
+
+    setFiles((current) => {
+      const combined = [...current, ...selected];
+      if (combined.length > MAX_FILES) {
+        setFileError(`You can attach up to ${MAX_FILES} files. Extra files were not added.`);
+        return combined.slice(0, MAX_FILES);
+      }
+      setFileError(null);
+      return combined;
+    });
+  }
+
+  function handleRemoveFile(index: number) {
+    setFiles((current) => current.filter((_, i) => i !== index));
+    setFileError(null);
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -106,6 +132,51 @@ export default function ReleaseForm() {
               </div>
             </div>
 
+            <div>
+              <label htmlFor="rf-files" className="block text-sm font-medium text-charcoal">
+                Supporting Documents (up to {MAX_FILES})
+              </label>
+              <input
+                id="rf-files"
+                name="files"
+                type="file"
+                multiple
+                accept="image/*,application/pdf"
+                onChange={handleFileChange}
+                disabled={files.length >= MAX_FILES}
+                className="mt-1 block w-full text-sm text-charcoal file:mr-4 file:rounded-full file:border-0 file:bg-fire-red file:px-4 file:py-2 file:text-sm file:font-bold file:text-white file:transition hover:file:bg-fire-red-dark disabled:cursor-not-allowed disabled:opacity-60"
+              />
+              <p className="mt-1 text-xs text-charcoal/60">
+                Accepted: images or PDF. For example, a photo ID, vehicle registration, or
+                insurance documents.
+              </p>
+              {fileError ? (
+                <p role="alert" className="mt-1 text-xs font-medium text-fire-red">
+                  {fileError}
+                </p>
+              ) : null}
+              {files.length > 0 ? (
+                <ul className="mt-2 space-y-1">
+                  {files.map((file, index) => (
+                    <li
+                      key={`${file.name}-${index}`}
+                      className="flex items-center justify-between gap-2 rounded-lg border border-hairline px-3 py-1.5 text-sm text-charcoal"
+                    >
+                      <span className="truncate">{file.name}</span>
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveFile(index)}
+                        className="flex-shrink-0 text-xs font-medium text-fire-red hover:underline"
+                        aria-label={`Remove ${file.name}`}
+                      >
+                        Remove
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+
             <label className="flex items-start gap-3">
               <input
                 type="checkbox"
@@ -121,12 +192,16 @@ export default function ReleaseForm() {
 
             <button
               type="submit"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-lg bg-fire-red px-8 text-lg font-bold text-white transition hover:bg-fire-red-dark"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-fire-red px-8 text-lg font-bold text-white transition hover:bg-fire-red-dark"
             >
               Submit Release Request
             </button>
           </form>
         )}
+
+        <div className="mt-8">
+          <EmailReleaseInfo />
+        </div>
       </div>
     </section>
   );

@@ -12,11 +12,10 @@ describe("TowedVehicle", () => {
       screen.getByRole("heading", { name: "How Can I Retrieve My Personal Belongings?" })
     ).toBeInTheDocument();
     expect(screen.getByText("Driver's license")).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: "Call About My Vehicle" })
-    ).toHaveAttribute("href", "tel:+13014210953");
-    expect(
-      screen.getByRole("link", { name: "Call Our Office for Assistance" })
-    ).toHaveAttribute("href", "tel:+13014210953");
+    const callButtons = screen.getAllByRole("link", { name: "Call A&M Towing Now" });
+    expect(callButtons).toHaveLength(2);
+    for (const link of callButtons) {
+      expect(link).toHaveAttribute("href", "tel:+13014210953");
+    }
   });
 });

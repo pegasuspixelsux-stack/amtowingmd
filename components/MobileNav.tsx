@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 
-export default function MobileNav() {
+export default function MobileNav({ light = false }: { light?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -15,7 +15,9 @@ export default function MobileNav() {
         aria-controls="mobile-nav-menu"
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-hairline text-charcoal"
+        className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border transition-colors ${
+          light ? "border-white text-white" : "border-hairline text-charcoal"
+        }`}
       >
         {open ? (
           <X className="h-5 w-5" aria-hidden="true" />

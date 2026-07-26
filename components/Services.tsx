@@ -36,27 +36,35 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white py-16 md:py-24">
+    <section id="services" className="py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl font-bold text-charcoal md:text-4xl">
+        <h2 className="text-center font-heading text-3xl font-bold text-white md:text-4xl">
           Towing &amp; Light Truck Services
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="rounded-lg border border-hairline bg-white p-6">
-              <Icon className="h-8 w-8 text-fire-red" aria-hidden="true" />
-              <h3 className="mt-4 font-heading text-xl font-bold text-charcoal">{title}</h3>
-              <p className="mt-2 text-sm text-charcoal/80">{body}</p>
+            <div
+              key={title}
+              className="group rounded-lg border border-white p-6 transition-colors duration-300 hover:bg-white"
+            >
+              <Icon className="h-8 w-8 text-[#ffff00]" aria-hidden="true" />
+              <h3 className="mt-4 font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-charcoal">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm text-white/90 transition-colors duration-300 group-hover:text-charcoal/80">
+                {body}
+              </p>
             </div>
           ))}
         </div>
         <div className="mt-12 text-center">
           <a
             href={BUSINESS.phoneLink}
-            className="inline-flex min-h-[48px] items-center justify-center rounded-lg bg-fire-red px-8 text-lg font-bold text-white transition hover:bg-fire-red-dark"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#ffff00] px-8 text-lg font-bold text-black transition hover:bg-[#e6e600]"
           >
-            Need Help Now? Call {BUSINESS.phone}
+            Call A&amp;M Towing Now
           </a>
+          <p className="mt-1 text-xs text-white/80">Call {BUSINESS.phone}</p>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@
   --color-charcoal: #212121;
   --color-light-gray: #f5f5f5;
   --color-hairline: #e3e3e3;
-  --font-heading: var(--font-barlow-condensed);
+  --font-heading: var(--font-inter-tight);
   --font-body: var(--font-inter);
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #ff0000;
+  background: #990000;
   color: var(--color-charcoal);
   font-family: var(--font-body), system-ui, sans-serif;
 }
@@ -25,4 +25,29 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-fire-red);
   outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker {
+    animation: none;
+  }
 }

@@ -15,16 +15,16 @@ export default function Hero() {
     <section id="home" className="relative isolate overflow-hidden bg-charcoal">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-placeholder.jpg"
-          alt="A&M Repair & Towing tow truck responding to a service call"
+          src="/images/am_international_1.JPEG"
+          alt="A&M Repair & Towing flatbed tow truck"
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/40" />
+        <div className="absolute inset-0 bg-charcoal/65" />
       </div>
-      <div className="mx-auto max-w-[1280px] px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-4 pb-20 pt-32 sm:px-6 md:pb-28 md:pt-40 lg:px-8">
         <h1 className="max-w-2xl font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
           24/7 Towing & Light Truck Services in Montgomery County, Maryland
         </h1>
@@ -32,16 +32,19 @@ export default function Hero() {
           Fast, courteous, and affordable towing services when you need them most. A&amp;M
           Repair &amp; Towing has proudly served Montgomery County since 2003.
         </p>
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <a
-            href={BUSINESS.phoneLink}
-            className="inline-flex min-h-[48px] items-center justify-center rounded-lg bg-fire-red px-8 text-lg font-bold text-white transition hover:bg-fire-red-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            Call Now — {BUSINESS.phone}
-          </a>
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+          <div className="flex flex-col items-center">
+            <a
+              href={BUSINESS.phoneLink}
+              className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full bg-[#ffff00] px-4 text-sm font-bold text-black transition hover:bg-[#e6e600] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Call A&amp;M Towing Now
+            </a>
+            <p className="mt-1 text-xs text-white/80">Call {BUSINESS.phone}</p>
+          </div>
           <a
             href="#services"
-            className="inline-flex min-h-[48px] items-center justify-center rounded-lg border-2 border-white px-8 text-lg font-bold text-white transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full border-2 border-white px-4 text-sm font-bold text-white transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Get Light Truck Towing
           </a>

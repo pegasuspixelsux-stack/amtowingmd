@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
-const SECTION_IDS = ["home", "services", "towed-vehicle", "release-form", "faq", "contact"];
+const SECTION_IDS = ["home", "services", "release-form", "faq", "contact"];
 
 describe("Home page", () => {
   it("renders every spec section id in the correct order", () => {

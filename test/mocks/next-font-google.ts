@@ -4,5 +4,5 @@ function makeFont(options?: FontOptions) {
   return { className: "", variable: options?.variable ?? "" };
 }
 
-export const Barlow_Condensed = makeFont;
+export const Inter_Tight = makeFont;
 export const Inter = makeFont;

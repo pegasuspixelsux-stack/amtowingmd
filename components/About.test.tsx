@@ -12,8 +12,9 @@ describe("About", () => {
       screen.getByText(/family-owned and operated business that has been serving/)
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /Call A&M Repair & Towing/ })
+      screen.getByRole("link", { name: "Call A&M Towing Now" })
     ).toHaveAttribute("href", "tel:+13014210953");
-    expect(screen.getByAltText(/tow truck assisting/i)).toBeInTheDocument();
+    expect(screen.getByText("Call (301) 421-0953")).toBeInTheDocument();
+    expect(screen.getByAltText(/flatbed tow truck/i)).toBeInTheDocument();
   });
 });

@@ -14,11 +14,10 @@ describe("BUSINESS", () => {
 });
 
 describe("NAV_LINKS", () => {
-  it("has the six spec anchor links in order", () => {
+  it("has the five spec anchor links in order", () => {
     expect(NAV_LINKS.map((l) => l.href)).toEqual([
       "#home",
       "#services",
-      "#towed-vehicle",
       "#release-form",
       "#faq",
       "#contact",

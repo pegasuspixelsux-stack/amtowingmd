@@ -11,7 +11,6 @@ export const BUSINESS = {
 export const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
-  { href: "#towed-vehicle", label: "Towed Vehicle" },
   { href: "#release-form", label: "Release Form" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },

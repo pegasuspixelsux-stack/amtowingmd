@@ -21,17 +21,17 @@ const REASONS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl font-bold text-charcoal md:text-4xl">
+        <h2 className="text-center font-heading text-3xl font-bold text-white md:text-4xl">
           Why Choose A&amp;M Repair &amp; Towing?
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {REASONS.map(({ icon: Icon, title, body }) => (
             <div key={title} className="rounded-lg border border-hairline p-6 text-center">
-              <Icon className="mx-auto h-8 w-8 text-fire-red" aria-hidden="true" />
-              <h3 className="mt-4 font-heading text-lg font-bold text-charcoal">{title}</h3>
-              <p className="mt-2 text-sm text-charcoal/80">{body}</p>
+              <Icon className="mx-auto h-8 w-8 text-white" aria-hidden="true" />
+              <h3 className="mt-4 font-heading text-lg font-bold text-white">{title}</h3>
+              <p className="mt-2 text-sm text-white/90">{body}</p>
             </div>
           ))}
         </div>
