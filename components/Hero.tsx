@@ -43,10 +43,10 @@ export default function Hero() {
             <p className="mt-1 text-xs text-white/80">Call {BUSINESS.phone}</p>
           </div>
           <a
-            href="#services"
-            className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full border-2 border-white px-4 text-sm font-bold text-white transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            href={BUSINESS.emailLink}
+            className="inline-flex w-64 min-h-[48px] items-center justify-center rounded-full border-2 border-white px-4 text-sm font-bold text-white transition duration-300 hover:scale-[1.2] hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Get Light Truck Towing
+            Email Us
           </a>
         </div>
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">

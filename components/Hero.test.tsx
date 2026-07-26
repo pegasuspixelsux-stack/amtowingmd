@@ -15,9 +15,9 @@ describe("Hero", () => {
       screen.getByRole("link", { name: "Call A&M Towing Now" })
     ).toHaveAttribute("href", "tel:+13014210953");
     expect(screen.getByText("Call (301) 421-0953")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Get Light Truck Towing" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Email Us" })).toHaveAttribute(
       "href",
-      "#services"
+      "mailto:aandmtowing2003@gmail.com"
     );
   });
 
