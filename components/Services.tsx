@@ -45,13 +45,13 @@ export default function Services() {
           {SERVICES.map(({ icon: Icon, title, body }) => (
             <div
               key={title}
-              className="group rounded-lg border border-white p-6 transition-colors duration-300 hover:bg-white"
+              className="group rounded-lg border border-white p-6 transition-colors duration-300 hover:bg-white active:bg-white"
             >
               <Icon className="h-8 w-8 text-[#ffff00]" aria-hidden="true" />
-              <h3 className="mt-4 font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-charcoal">
+              <h3 className="mt-4 font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-charcoal group-active:text-charcoal">
                 {title}
               </h3>
-              <p className="mt-2 text-sm text-white/90 transition-colors duration-300 group-hover:text-charcoal/80">
+              <p className="mt-2 text-sm text-white/90 transition-colors duration-300 group-hover:text-charcoal/80 group-active:text-charcoal/80">
                 {body}
               </p>
             </div>

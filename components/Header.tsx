@@ -63,12 +63,6 @@ export default function Header() {
               Call {BUSINESS.phone}
             </p>
           </div>
-          <a
-            href={BUSINESS.phoneLink}
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#ffff00] px-4 text-sm font-bold text-black transition hover:bg-[#e6e600] sm:hidden"
-          >
-            Call A&amp;M Now
-          </a>
           <MobileNav light={!scrolled} />
         </div>
       </div>
