@@ -5,6 +5,7 @@ import { BUSINESS } from "@/lib/constants";
 import EmailReleaseInfo from "./EmailReleaseInfo";
 
 const MAX_FILES = 5;
+const SUBMIT_EMAIL = "dcrecycler@gmail.com";
 
 const FIELDS: Array<{
   id: string;
@@ -61,9 +62,27 @@ export default function ReleaseForm() {
       form?.reportValidity();
       return;
     }
-    // No backend is configured yet: this intentionally does not send data
-    // anywhere. Replace this branch with a real submit handler later —
-    // the field list and markup above don't need to change.
+
+    const formData = new FormData(form);
+    const lines = FIELDS.map((field) => `${field.label}: ${formData.get(field.name) || "—"}`);
+    const notes = formData.get("notes");
+    if (notes) {
+      lines.push(`Additional Information: ${notes}`);
+    }
+    if (files.length > 0) {
+      lines.push(
+        `Attachments (please attach manually before sending): ${files
+          .map((file) => file.name)
+          .join(", ")}`
+      );
+    }
+
+    const subject = "Insurance Vehicle Release Form Submission";
+    const body = lines.join("\n");
+    window.location.href = `mailto:${SUBMIT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
     setSubmitted(true);
   }
 
@@ -93,8 +112,9 @@ export default function ReleaseForm() {
             className="mt-8 rounded-lg border border-hairline bg-light-gray p-6 text-center"
           >
             <p className="text-base text-charcoal">
-              Your release request has been received. A&amp;M Repair &amp; Towing will review
-              the information provided. If your request is urgent, please call {BUSINESS.phone}.
+              Your email app should have opened with the release request pre-filled — attach any
+              selected files and hit send to submit it. If your request is urgent, please call{" "}
+              {BUSINESS.phone}.
             </p>
           </div>
         ) : (

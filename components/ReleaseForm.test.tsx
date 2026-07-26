@@ -20,7 +20,7 @@ describe("ReleaseForm", () => {
     await userEvent.click(screen.getByRole("button", { name: "Submit Release Request" }));
 
     expect(
-      screen.queryByText(/Your release request has been received/)
+      screen.queryByText(/Your email app should have opened/)
     ).not.toBeInTheDocument();
   });
 
@@ -37,7 +37,7 @@ describe("ReleaseForm", () => {
     await userEvent.click(screen.getByRole("button", { name: "Submit Release Request" }));
 
     expect(
-      await screen.findByText(/Your release request has been received/)
+      await screen.findByText(/Your email app should have opened/)
     ).toBeInTheDocument();
     expect(fetchSpy).not.toHaveBeenCalled();
     fetchSpy.mockRestore();
