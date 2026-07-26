@@ -19,8 +19,8 @@ const SERVICES = [
   },
   {
     icon: Wrench,
-    title: "Breakdown Assistance",
-    body: "Reliable help when your vehicle breaks down unexpectedly.",
+    title: "Classic Car Local Transport",
+    body: "Careful, local transport for classic and collector vehicles.",
   },
   {
     icon: Truck,

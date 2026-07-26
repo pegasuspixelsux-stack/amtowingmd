@@ -6,7 +6,7 @@ const SERVICE_TITLES = [
   "Emergency Towing",
   "Light Truck Towing",
   "Accident Towing",
-  "Breakdown Assistance",
+  "Classic Car Local Transport",
   "Vehicle Recovery",
   "Local Towing",
 ];
