@@ -39,7 +39,8 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-heading text-3xl font-bold text-white md:text-4xl">
-          Towing &amp; Light Truck Services
+          Towing &amp; Light <br className="md:hidden" />
+          Truck Services
         </h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ icon: Icon, title, body }) => (

@@ -7,7 +7,8 @@ export default function About() {
       <div className="mx-auto grid max-w-[1280px] gap-10 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
         <div>
           <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-            Reliable Towing When You Need It Most
+            Reliable Towing <br className="md:hidden" />
+            When You Need It Most
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/90">
             A&amp;M Repair &amp; Towing provides fast, courteous, and affordable towing services
