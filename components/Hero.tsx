@@ -12,7 +12,10 @@ const TRUST_BADGES = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative isolate overflow-hidden bg-charcoal">
+    <section
+      id="home"
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-charcoal"
+    >
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/am_international_1.JPEG"
@@ -24,7 +27,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-charcoal/65" />
       </div>
-      <div className="mx-auto max-w-[1280px] px-4 pb-20 pt-32 sm:px-6 md:pb-28 md:pt-40 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-4 py-24 sm:px-6 md:py-28 lg:px-8">
         <h1 className="max-w-2xl font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
           24/7 Towing & Light Truck Services in Montgomery County, Maryland
         </h1>
