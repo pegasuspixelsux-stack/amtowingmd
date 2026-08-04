@@ -1,18 +1,26 @@
 import { CalendarClock, Clock, ShieldCheck, Users } from "lucide-react";
 
 const TRUST_ITEMS = [
-  { icon: Clock, title: "24/7 Availability", body: "We're ready to respond day or night." },
+  {
+    icon: Clock,
+    title: "24/7 Availability",
+    body: "Breakdowns and accidents don't wait for business hours, and neither do we. Call any time, day or night, and a driver will be dispatched to you.",
+  },
   {
     icon: CalendarClock,
     title: "Serving Since 2003",
-    body: "Years of experience helping drivers in Montgomery County.",
+    body: "For over 20 years we've helped drivers throughout Montgomery County get back on the road, building a reputation for fast, dependable service call after call.",
   },
   {
     icon: ShieldCheck,
     title: "Licensed & Insured",
-    body: "Professional drivers and fully insured service.",
+    body: "Our drivers are fully licensed and insured, so your vehicle is handled by trained professionals and protected from the moment we arrive until drop-off.",
   },
-  { icon: Users, title: "Family Owned", body: "A local, family-owned and operated business." },
+  {
+    icon: Users,
+    title: "Family Owned",
+    body: "We're a local, family-owned and operated business, not a call center. When you reach out, you're talking to neighbors who care about getting it right.",
+  },
 ];
 
 export default function TrustBar() {
