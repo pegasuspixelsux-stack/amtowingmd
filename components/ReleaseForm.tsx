@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/constants";
 import EmailReleaseInfo from "./EmailReleaseInfo";
 
 const MAX_FILES = 5;
-const SUBMIT_EMAIL = "dcrecycler@gmail.com";
+const SUBMIT_EMAIL = BUSINESS.email;
 
 const FIELDS: Array<{
   id: string;
